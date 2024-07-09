@@ -18,11 +18,14 @@ aws ecr get-login-password --region <your-region> | docker login --username AWS 
 
 ```bash
 aws ecr create-repository --repository-name nginx-hello-world
+aws ecr create-repository --repository-name simple-app
 ```
 
-### 4. TAG the Docker Image
+### 4. Build and TAG the Docker Image
 
 ```bash
+docker build -t nginx-hello-world:v1.0.0 .
+docker build -t simple-app:v0.0.6 .
 docker tag nginx-hello-world:v1.0.0 <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/nginx-hello-world:v1.0.0
 ```
 

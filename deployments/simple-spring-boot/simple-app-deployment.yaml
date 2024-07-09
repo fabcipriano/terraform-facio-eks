@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: simple-app
-        image: simple-app:v0.0.6
-        imagePullPolicy: IfNotPresent
+        image: 437139062267.dkr.ecr.us-east-1.amazonaws.com/simple-app:v0.0.6
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 ---
@@ -30,4 +30,4 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-  type: NodePort
+  type: ClusterIP
