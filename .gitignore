@@ -1,0 +1,38 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+plantf
+
+# Crash log files
+crash.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as passwords, private keys, and other secrets.
+*.tfvars
+
+# Ignore override files as they are usually used to override resources locally and should not be committed
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include .terraform directory to ignore Terraform's working directory
+.terraform/
+
+# Ignore any .terraformrc and terraform.rc files
+.terraformrc
+terraform.rc
+
+# Ignore backup files created by Terraform
+*.backup
+
+# Ignore any plan files
+*.tfplan
+
+# Ignore any files related to the private subnets
+private_subnets
+
+# Ignore any other temporary files
+*.log
+*.bak
+*.tmp
