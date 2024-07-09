@@ -32,3 +32,8 @@ docker tag nginx-hello-world:v1.0.0 <your-account-id>.dkr.ecr.<your-region>.amaz
 docker push <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/nginx-hello-world:v1.0.0
 ```
 
+### 6. Apply the updated ConfigMap so that root user has access to EKR Cluster:
+
+```bash
+kubectl apply -f aws-auth.yaml
+```
